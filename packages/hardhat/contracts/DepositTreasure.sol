@@ -24,10 +24,10 @@ contract DepositTreasure {
 	address USDBAddress = 0x4200000000000000000000000000000000000022; // USDB address
 	uint FIVE_YEARS = 5 * 365 days;
 
-	mapping(uint _id => Deposit _deposit) depositIDToDeposit;
-	mapping(uint _id => address _depositor) depositIDToDepositor;
+	mapping(uint _id => Deposit _deposit) public depositIDToDeposit;
+	mapping(uint _id => address _depositor) public depositIDToDepositor;
 
-	uint depositID = 0;
+	uint public depositID = 0;
 
 	/// @notice Deposit the USDB
 	/// @param _amount The amount of USDB to deposit
